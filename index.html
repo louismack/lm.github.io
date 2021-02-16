@@ -30,7 +30,7 @@ p {
   color: #eee;
   opacity: 0.3;
 }
-.letter {
+.letters span {
   width: 24px;
   display: inline-block;
   vertical-align: middle;
@@ -44,7 +44,7 @@ p {
   text-transform: uppercase;
   color: #eee;
 }
-.letter:before {
+.letters span:before {
   position: absolute;
   top: 0;
   left: 0;
@@ -648,7 +648,7 @@ body {
 <button class="treat-button" onclick="myFunction()">souper!!!</button>
 </div>
 <div class="wrapper">
-<div class="letters"><br><span id=letter1 class="letter"></span><span id=letter2 class="letter"></span><span id=letter3 class="letter"></span><span id=letter4 class="letter"></span><span id=letter5 class="letter"></span><span id=letter6 class="letter"></span><span id=letter7 class="letter"></span><span id=letter8 class="letter"></span><span id=letter9 class="letter"></span><span id=letter10 class="letter"></span><span id=letter11 class="letter"></span><span id=letter12 class="letter"></span><span id=letter13 class="letter"></span><span id=letter14 class="letter"></span><span id=letter15 class="letter"></span><span id=letter16 class="letter"></span><span id=letter17 class="letter"></span><span id=letter18 class="letter"></span><span id=letter19 class="letter"></span><span id=letter20 class="letter"></span><span id=letter21 class="letter"></span><span id=letter22 class="letter"></span></div>
+<div class="letters"><br><span id=letter1 ></span><span id=letter2 ></span><span id=letter3 ></span><span id=letter4 ></span><span id=letter5 ></span><span id=letter6 ></span><span id=letter7 ></span><span id=letter8 ></span><span id=letter9 ></span><span id=letter10 ></span><span id=letter11 ></span><span id=letter12 ></span><span id=letter13 ></span><span id=letter14 ></span><span id=letter15 ></span><span id=letter16 ></span><span id=letter17 ></span><span id=letter18 ></span><span id=letter19 ></span><span id=letter20 ></span><span id=letter21 ></span><span id=letter22 ></span></div>
 </div>
 <script>
 count = 0;
@@ -759,259 +759,26 @@ var meat = document.getElementById("mySelect").value;
     demo = "error";
   }
     let res = demo.split("");
-  document.getElementById("letter1").textContent= res[0]; 
-  var targetElement = document.getElementById("letter1");
-      targetElement.className += " animate1";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter1")
-        	targetElement.classList.remove('animate1');
-        }, 2000);
-		  if (res[0]==" ") {
- var h = document.getElementById("letter1");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter2").textContent= res[1];
-  var targetElement = document.getElementById("letter2")
-      targetElement.className += " animate2";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter2")
-        	targetElement.classList.remove('animate2');
-        }, 2000);
-		 if (res[1]==" ") {
- var h = document.getElementById("letter2");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter3").textContent= res[2];
-  var targetElement = document.getElementById("letter3")
-      targetElement.className += " animate3";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter3")
-        	targetElement.classList.remove('animate3');
-        }, 2000);
-		  if (res[2]==" ") {
- var h = document.getElementById("letter3");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter4").textContent= res[3];
-      var targetElement = document.getElementById("letter4")
-      targetElement.className += " animate4";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter4")
-        	targetElement.classList.remove('animate4');
-        }, 2000);
-		  if (res[3]==" ") {
- var h = document.getElementById("letter4");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter5").textContent= res[4];
-  var targetElement = document.getElementById("letter5")
-      targetElement.className += " animate5";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter5")
-        	targetElement.classList.remove('animate5');
-        }, 2000);
-		  if (res[4]==" ") {
- var h = document.getElementById("letter5");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter6").textContent= res[5];
-  var targetElement = document.getElementById("letter6")
-      targetElement.className += " animate6";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter6")
-        	targetElement.classList.remove('animate6');
-        }, 2000);
-		  if (res[5]==" ") {
- var h = document.getElementById("letter6");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter7").textContent= res[6];
-      var targetElement = document.getElementById("letter7")
-      targetElement.className += " animate7";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter7")
-        	targetElement.classList.remove('animate7');
-        }, 2000);
-		  if (res[6]==" ") {
- var h = document.getElementById("letter7");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter8").textContent= res[7];
-      var targetElement = document.getElementById("letter8")
-      targetElement.className += " animate8";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter8")
-        	targetElement.classList.remove('animate8');
-        }, 2000);
-		 if (res[7]==" ") {
- var h = document.getElementById("letter8");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter9").textContent= res[8];
-      var targetElement = document.getElementById("letter9")
-      targetElement.className += " animate9";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter9")
-        	targetElement.classList.remove('animate9');
-        }, 2000);
-		  if (res[8]==" ") {
- var h = document.getElementById("letter9");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter10").textContent= res[9];
-      var targetElement = document.getElementById("letter10")
-      targetElement.className += " animate10";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter10")
-        	targetElement.classList.remove('animate10');
-        }, 2000);
-		  if (res[9]==" ") {
- var h = document.getElementById("letter10");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter11").textContent= res[10];
-      var targetElement = document.getElementById("letter11")
-      targetElement.className += " animate11";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter11")
-        	targetElement.classList.remove('animate11');
-        }, 2000);
-		  if (res[10]==" ") {
- var h = document.getElementById("letter11");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter12").textContent= res[11];
-      var targetElement = document.getElementById("letter12")
-      targetElement.className += " animate12";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter12")
-        	targetElement.classList.remove('animate12');
-        }, 2000);
-		  if (res[11]==" ") {
- var h = document.getElementById("letter12");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter13").textContent= res[12];
-      var targetElement = document.getElementById("letter13")
-      targetElement.className += " animate13";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter13")
-        	targetElement.classList.remove('animate13');
-        }, 2000);
-		  if (res[12]==" ") {
- var h = document.getElementById("letter13");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter14").textContent= res[13];
-      var targetElement = document.getElementById("letter14")
-      targetElement.className += " animate14";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter14")
-        	targetElement.classList.remove('animate14');
-        }, 2000);
-		  if (res[13]==" ") {
- var h = document.getElementById("letter14");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter15").textContent= res[14];
-      var targetElement = document.getElementById("letter15")
-      targetElement.className += " animate15";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter15")
-        	targetElement.classList.remove('animate15');
-        }, 2000);
-		  if (res[14]==" ") {
- var h = document.getElementById("letter15");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter16").textContent= res[15];
-      var targetElement = document.getElementById("letter16")
-      targetElement.className += " animate16";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter16")
-        	targetElement.classList.remove('animate16');
-        }, 2000);
-		  if (res[15]==" ") {
- var h = document.getElementById("letter16");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter17").textContent= res[16];
-      var targetElement = document.getElementById("letter17")
-      targetElement.className += " animate17";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter17")
-        	targetElement.classList.remove('animate17');
-        }, 2000);
-		  if (res[16]==" ") {
- var h = document.getElementById("letter17");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter18").textContent= res[17];
-      var targetElement = document.getElementById("letter18")
-      targetElement.className += " animate18";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter18")
-        	targetElement.classList.remove('animate18');
-        }, 2000);
-		  if (res[17]==" ") {
- var h = document.getElementById("letter18");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter19").textContent= res[18];  
-      var targetElement = document.getElementById("letter19")
-      targetElement.className += " animate19";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter19")
-        	targetElement.classList.remove('animate19');
-        }, 2000);
-		  if (res[18]==" ") {
- var h = document.getElementById("letter19");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter20").textContent= res[19];
-      var targetElement = document.getElementById("letter20")
-      targetElement.className += " animate20";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter20")
-        	targetElement.classList.remove('animate20');
-        }, 2000);
-		  if (res[19]==" ") {
- var h = document.getElementById("letter20");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter21").textContent= res[20];
-      var targetElement = document.getElementById("letter21")
-      targetElement.className += " animate21";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter21")
-        	targetElement.classList.remove('animate21');
-        }, 2000);
-		  if (res[20]==" ") {
- var h = document.getElementById("letter21");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-  document.getElementById("letter22").textContent= res[21];
-      var targetElement = document.getElementById("letter22")
-      targetElement.className += " animate22";
-      setTimeout(function(){
-      var targetElement = document.getElementById("letter22")
-        	targetElement.classList.remove('animate22');
-        }, 2000);
-		  if (res[21]==" ") {
- var h = document.getElementById("letter22");
-  h.insertAdjacentHTML("afterend", "<br id=br" + a + ">");
-}
-var mybr = document.getElementById("br" + count);
-  mybr.remove();
-var mybr = document.getElementById("br" + count);
-  mybr.remove();
-  var mybr = document.getElementById("br" + count);
-  mybr.remove();
-  var mybr = document.getElementById("br" + count);
-  mybr.remove();
+	for (i = 0; i < 22; i++){
+	const letterId = i+1;
+		const targetElement = document.getElementById("letter" + letterId);
+		if (res[i]==" ") {
+			targetElement.insertAdjacentHTML("afterend", "<br class=br" + a + ">");
+			targetElement.textContent= " ";
+		}else {
+		if(targetElement){
+			targetElement.textContent= res[i];
+			const className = " animate" + letterId;
+			targetElement.className += className;
+			setTimeout(function(){
+				targetElement.classList.remove("animate" + letterId);
+			}, 2000);
+		}}
+	}
+	document.querySelectorAll(".br" + count).forEach(el => el.remove());
+
 }
 
-console.clear();
 
 let width = window.innerWidth;
 let height = window.innerHeight;

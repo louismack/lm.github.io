@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            height: auto;
+            width: 100%;
+            margin: 0;
+            font-family: Perpetua, Baskerville, "Big Caslon", "Palatino Linotype";
+            overflow-x: hidden;
+            background-color: #c2ddfc;
+        }
+        a{
+            text-decoration: none;
+            color: #fff;
+        }
+        #navbar{
+            display: flex;
+            height: 70px;
+            width: 100%;
+            justify-content: flex-end;
+            position: fixed;
+            top: 0;
+            transition: 1s;
+            z-index: 99;
+        } .black {
+         background-color: #000;   
+        }
+        
+        #navbar div{
+            display: flex;
+            min-width: 40vw;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #navbar div a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 28px;
+            padding: 0 15px;
+        }
+        #welcome-section{
+            background-image: url(http://www.discoveralabamabeaches.com/wp-content/uploads/2014/06/Photo-1-HDR.jpg);
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #fff;
+        }
+        #welcome-section h1{
+          font-size: 56px;  
+          margin: 0;
+        }
+        #welcome-section h2{
+            color: #007eff;
+            margin: 0.5em 0 3.2em;
+            font-size: 40px;
+            font-weight: 200;
+        }
+        .show-on-scroll{
+            opacity: 0;
+  transform: translateY(4em) rotateZ(-5deg);
+  transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+              opacity .3s .25s ease-out;
+              will-change: transform, opacity;
+        }
+        .is-visible {
+  opacity: 1;
+  transform: rotateZ(0deg);
+}
+        @media(max-width: 600px){
+            #welcome-section h1{
+          font-size: 43px;
+        } 
+        #welcome-section h2{
+                font-size: 31px;
+            }
+            footer {
+                padding-bottom: 25px !important;
+            }
+        }
+        @media(max-width: 375px){
+            #navbar{
+                justify-content: center;
+            }
+            #navbar div a {
+                font-size: 22px;
+            }
+            #welcome-section h1{
+                font-size: 36px;
+            }
+            #welcome-section h2{
+                font-size: 28px;
+            }
+        }
+             .project-tile {
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                border-radius: 5px; /* 5px rounded corners */
+                width: 100%;
+                background-color: #00000010;
+            }
+
+            /* Add rounded corners to the top left and the top right corner of the image */
+            img {
+            border-radius: 5px 5px 0 0;
+            width: 100%;
+            }
+            .project-tile:hover {
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+                }
+
+             .project-tile-footer {
+                padding: 15px 0;
+                text-align: center;
+                }
+            .project-tile-footer h3{
+                color: #000;
+                margin: 0;
+                font-size: 24px;
+            }
+            #projects{
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-gap: 40px 0;
+                padding: 100px 0 60px;
+                justify-items: center;
+                background-color: #c2ddfc;
+            }
+            #projects a {
+                width: 80%;
+            }
+            .project-tile-footer span{
+                font-size: 20px;
+                color: transparent;
+                transition: 0.6s;
+            }
+            .project-tile-footer:hover span{
+                color: rgb(75, 75, 75);
+            }
+            @media (max-width: 725px) {
+                #projects{
+                grid-template-columns: 100%;
+                }
+                #projects a {
+                margin: 5px 50px;
+            }
+            }
+            @media(max-width: 475px){
+            #projects a {
+                margin: 5px 22px;
+                }
+                #projects{
+                    grid-gap: 30px 0;
+                }
+            }
+            .small-text h3{
+                font-size: 18px;
+            }
+            .small-text span{
+                font-size: 15px;
+            }
+            @media(max-width: 390px){
+                .project-tile-footer h3{
+                font-size: 15px;
+            }
+            .project-tile-footer span{
+                font-size: 12px;
+            }
+            }
+            body > h2{
+                margin: 0;
+                position: absolute;
+                left: calc(50vw - 99.5px);
+                right: calc(50vw - 99.5px);
+                top: 105vh;
+                font-size: 36px;
+                z-index: 40;
+            }
+            footer{
+            background-color:#00000090;
+            margin: 0 auto;
+            padding: 5px 0;
+            text-align: center;
+            width: 100%;
+            color: #fff;
+        }
+        footer h2 span {
+            font-size: 21px;
+        }
+
+    </style>
+</head>
+<body id="body"onscroll="onBodyScroll()">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <nav id="navbar">
+        <div>
+            <a href="javascript:scrollTop()">About</a>
+            <a href="#projects">Work</a>
+            <a href="#profile-link">Contact</a> 
+        </div>
+    </nav>
+    <section id="welcome-section" class="rellax" data-rellax-speed="-7">
+        <h1 class="show-on-scroll">Hey I'm Vincent</h1>
+        <h2 class="show-on-scroll">a web developper</h2>
+    </section>
+    <h2>My Projects</h2>
+    <section id="projects" class="rellax" data-rellax-speed="0">
+        
+        <a href="https://codepen.io/urururu/full/wvoGvow">
+            <div class="project-tile">
+            <img src="https://assets.codepen.io/5711190/internal/screenshots/pens/wvoGvow.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1613604964&width=960">
+            <div class="project-tile-footer">
+              <h3><span><</span>Movie Survey<span>/></span></h3>
+            </div>
+          </div> 
+          </a>  
+          <a href="https://codepen.io/urururu/full/zYoqOVZ">
+            <div class="project-tile">
+            <img src="https://assets.codepen.io/5711190/internal/screenshots/pens/zYoqOVZ.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1613603690&width=960">
+            <div class="project-tile-footer">
+                <h3><span><</span>Tribute Page<span>/></span></h3>
+            </div>
+          </div> 
+          </a>   
+          <a href="https://codepen.io/urururu/full/bGgVYmm">
+            <div class="project-tile">
+            <img src="https://assets.codepen.io/5711190/internal/screenshots/pens/bGgVYmm.default.png?fit=cover&format=auto&ha=true&height=540&quality=75&v=2&version=1616689180&width=960">
+            <div class="project-tile-footer">
+                <h3><span><</span>Landing Page<span>/></span></h3>
+            </div>
+          </div> 
+          </a>    
+          <a href="https://codepen.io/urururu/full/QWdEmmM">
+            <div id="technical-doc" class="project-tile">
+            <img src="https://assets.codepen.io/5711190/internal/screenshots/pens/QWdEmmM.default.png?fit=cover&format=auto&ha=false&height=540&quality=75&v=2&version=1616953763&width=960">
+            <div class="project-tile-footer">
+                <h3><span><</span>Technical Documentation<span>/></span></h3>
+            </div>
+          </div> 
+          </a>    
+    </section>
+    <footer>
+        <h2><span>©</span> <a id="profile-link" href="https://www.freecodecamp.org/fcc7c272dae-381d-43e0-b70b-01ade4045c78" target="_blank">Vincent Bello</a></h2>
+    </footer>
+</body>
+<script type="text/javascript" src="http://yourjavascript.com/4221504134/rellax.js"></script>
+<script>
+    function onBodyScroll(){
+        var body = document.getElementById("body");
+        var navbar = document.getElementById("navbar");
+        var rect = body.getBoundingClientRect();
+        var bodyTopPosition = rect.top + document.body.scrollTop;
+        if(bodyTopPosition < -1){
+            navbar.classList.add("black");
+        }
+        else{
+            navbar.classList.remove("black");
+        }
+        setCardFontSize();
+    }
+            var elementsToShow = document.querySelectorAll('.show-on-scroll');
+            function loop() {
+
+    Array.prototype.forEach.call(elementsToShow, function(element){
+        if (isElementInViewport(element)) {
+            element.classList.add('is-visible');
+        } else {
+            element.classList.remove('is-visible');
+        }
+    });
+}
+    // Call the loop for the first time
+    loop();
+        // Helper function from: http://stackoverflow.com/a/7557433/274826
+function isElementInViewport(el) {
+  // special bonus for those using jQuery
+  if (typeof jQuery === "function" && el instanceof jQuery) {
+    el = el[0];
+  }
+  var rect = el.getBoundingClientRect();
+  return (
+    (rect.top <= 0
+      && rect.bottom >= 0)
+    ||
+    (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+    ||
+    (rect.top >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+  );
+}
+
+    function setCardFontSize(){    
+        let card = document.querySelector('#technical-doc');
+        let cards = document.querySelector("#projects")
+        let cardWidth = card.offsetWidth;
+        if(cardWidth < 300){
+            cards.classList.add("small-text");
+        }
+    }
+    var rellax = new Rellax('.rellax', {
+        center: false,
+    wrapper: null,
+    round: true,
+    vertical: true,
+    horizontal: false
+      });
+      function scrollTop(){
+        window.scrollTo(0, 0);
+      };
+
+</script>
+</html>
